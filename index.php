@@ -45,7 +45,7 @@
 
             <div> <?php echo randomPassword($lunghezza) ?> </div>
             
-            <?php include "./functions.php" ?>
+            <?php include __DIR__ . "/functions.php" ?>
 
         </div>
     </div>
