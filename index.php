@@ -26,7 +26,24 @@
         <div> 
             <div class="mt-5">La password consigliata è:</div>
 
-            <div> <?php  ?>  BOH </div>
+            <?php
+            $lunghezza = $_GET["lunghezza_password"];
+            // var_dump($lunghezza);
+
+            function randomPassword($lunghezza) {
+            $alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!?$%";
+            $pass = array();
+            $alphaLength = strlen($alphabet) - 1; 
+            
+            for ($i = 0; $i < $lunghezza; $i++) {
+                $n = rand(0, $alphaLength);
+                $pass[] = $alphabet[$n];
+            }
+            return implode($pass); 
+            }
+            ?>
+
+            <div> <?php echo randomPassword($lunghezza) ?> </div>
             
 
         </div>
@@ -39,8 +56,3 @@
 Creare un form che invii in GET la lunghezza della password. Una nostra funzione utilizzerà questo dato per generare una password casuale (composta da lettere, lettere maiuscole, numeri e simboli) da restituire all'utente.
 Scriviamo tutto (logica e layout) in un unico file *index.php*  -->
 
-<?php
-$lunghezza = $_GET["lunghezza_password"];
-var_dump($lunghezza);
-
-?>
