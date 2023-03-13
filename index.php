@@ -13,7 +13,7 @@
 
     <div class="container mt-5">
         <div class="row row-cols-4">
-            <form method="GET" action="./milestone3.php">
+            <form method="GET" action="./index.php">
                 <label for="lunghezza_password" class="mx-2">Scegli lunghezza password:</label>
                 <div class="col input-group mb-3">
                     <input type="number" class="form-control" id="lunghezza_password" name="lunghezza_password" placeholder="lunghezza password" min="5" max="10">
@@ -21,6 +21,16 @@
                 </div>
             </form>
         </div>
+
+        <div> 
+            <div class="mt-5">La password consigliata è:</div>
+
+            <?php include __DIR__ . "/functions.php" ?>
+        </div>
+
+        <button class="btn btn-outline-primary mt-5" type="submit">
+            <a href="http://localhost:8888/Boolean/2023-03-13/php-strong-password-generator/">Refersh url</a>
+        </button>
     </div>
     
 </body>
