@@ -13,13 +13,19 @@
 
     <div class="container mt-5">
         <div class="row row-cols-4">
-            <form>
-                <label for="lunghezza_password" class="mx-2">Inserisci lunghezza password:</label>
+            <form method="GET">
+                <label for="lunghezza_password" class="mx-2">Scegli lunghezza password:</label>
                 <div class="col input-group mb-3">
-                    <input type="number" class="form-control" id="lunghezza_password" name="lunghezza_password" placeholder="lunghezza password">
-                    <button class="btn btn-secondary btn-outline-warning" type="button" id="button-addon2">Invia</button>
+                    <input type="number" class="form-control" id="lunghezza_password" name="lunghezza_password" placeholder="lunghezza password" min="5" max="10">
+                    <button class="btn btn-secondary btn-outline-warning" type="submit">Invia</button>
                 </div>
             </form>
+        </div>
+
+
+        <div> 
+            <div class="mt-5">La password consigliata è:</div>
+            <div> ... </div>
         </div>
     </div>
     
@@ -29,3 +35,5 @@
 <!-- Milestone 1
 Creare un form che invii in GET la lunghezza della password. Una nostra funzione utilizzerà questo dato per generare una password casuale (composta da lettere, lettere maiuscole, numeri e simboli) da restituire all'utente.
 Scriviamo tutto (logica e layout) in un unico file *index.php*  -->
+
+<?php  ?>
