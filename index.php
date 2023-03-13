@@ -26,27 +26,7 @@
         <div> 
             <div class="mt-5">La password consigliata è:</div>
 
-            <?php
-            $lunghezza = $_GET["lunghezza_password"];
-            // var_dump($lunghezza);
-
-            function randomPassword($lunghezza) {
-            $alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!?$%";
-            $pass = array();
-            $alphaLength = strlen($alphabet) - 1; 
-            
-            for ($i = 0; $i < $lunghezza; $i++) {
-                $n = rand(0, $alphaLength);
-                $pass[] = $alphabet[$n];
-            }
-            return implode($pass); 
-            }
-            ?>
-
-            <div> <?php echo randomPassword($lunghezza) ?> </div>
-            
             <?php include __DIR__ . "/functions.php" ?>
-
         </div>
     </div>
     
