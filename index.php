@@ -26,6 +26,13 @@
             <div class="mt-5">La password consigliata è:</div>
 
             <?php include __DIR__ . "/functions.php" ?>
+
+            <?php
+            // randomPassword($lunghezza) = $newPassword;
+
+            session_start();
+            $_SESSION["new_password"] = randomPassword($lunghezza);
+            ?>
         </div>
 
         <button class="btn btn-outline-primary mt-5" type="submit">
