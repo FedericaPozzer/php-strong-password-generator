@@ -22,16 +22,15 @@
             </form>
         </div>
 
-        <div> 
-            <div class="mt-5">La password consigliata è:</div>
+        <div class="d-flex mt-5"> 
+            <div class="me-2">La password consigliata è:</div>
 
             <?php include __DIR__ . "/functions.php" ?>
 
             <?php
-            // randomPassword($lunghezza) = $newPassword;
-
-            session_start();
-            $_SESSION["new_password"] = randomPassword($lunghezza);
+            // randomPassword($lunghezza) = newPassword
+            // session_start();
+            // $_SESSION["new_password"] = newPassword ;
             ?>
         </div>
 
