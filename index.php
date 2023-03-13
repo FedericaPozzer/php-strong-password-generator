@@ -13,20 +13,13 @@
 
     <div class="container mt-5">
         <div class="row row-cols-4">
-            <form method="GET">
+            <form method="GET" action="./milestone3.php">
                 <label for="lunghezza_password" class="mx-2">Scegli lunghezza password:</label>
                 <div class="col input-group mb-3">
                     <input type="number" class="form-control" id="lunghezza_password" name="lunghezza_password" placeholder="lunghezza password" min="5" max="10">
                     <button class="btn btn-secondary btn-outline-warning" type="submit">Invia</button>
                 </div>
             </form>
-        </div>
-
-
-        <div> 
-            <div class="mt-5">La password consigliata è:</div>
-
-            <?php include __DIR__ . "/functions.php" ?>
         </div>
     </div>
     
