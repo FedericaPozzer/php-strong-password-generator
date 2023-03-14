@@ -13,7 +13,7 @@
 
     <div class="container mt-5">
         <div class="row row-cols-4">
-            <form method="GET" action="./index.php">
+            <form method="GET" action="./check.php">
                 <label for="lunghezza_password" class="mx-2">Scegli lunghezza password:</label>
                 <div class="col input-group mb-3">
                     <input type="number" class="form-control" id="lunghezza_password" name="lunghezza_password" placeholder="lunghezza password" min="5" max="10">
@@ -28,6 +28,8 @@
             <?php include __DIR__ . "/functions.php" ?>
 
             <?php
+            // header("Location: ./milestone3.php")
+            
             // randomPassword($lunghezza) = newPassword
             // session_start();
             // $_SESSION["new_password"] = newPassword ;
