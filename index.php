@@ -26,12 +26,23 @@
             <div class="me-2">La password consigliata è:</div>
 
             <?php include __DIR__ . "/functions.php" ?>
+            <?php
+            if (!empty($_GET)) {
+            $lunghezza = $_GET["lunghezza_password"];
+
+            $generatedPassword = randomPassword($lunghezza);
+            ?>
+
+            <div> <?php echo $generatedPassword ?> </div>
+
+            <?php } ?>
+
 
             <?php
             // header("Location: ./milestone3.php")
 
             // randomPassword($lunghezza) = newPassword
-            
+
             // session_start();
             // echo $_SESSION["new_password"];
             ?>

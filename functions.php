@@ -3,10 +3,6 @@ Verificato il corretto funzionamento del nostro codice, spostiamo la logica in u
 <!-- <h1 class="text-success mt-5">"include" ok!</h1> -->
 
 <?php
-if (!empty($_GET)) {
-    $lunghezza = $_GET["lunghezza_password"];
-    // var_dump($lunghezza);
-
     function randomPassword($lunghezza) {
     $alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!?$%";
     $pass = array();
@@ -18,15 +14,4 @@ if (!empty($_GET)) {
     }
     return implode($pass); 
     }
-
-    $generatedPassword = randomPassword($lunghezza);
-?>
-
-<div> <?php echo $generatedPassword ?> </div>
-
-<?php } ?>
-
-<?php
-// session_start()
-// $_SESSION["new_password"] = $generatedPassword;
 ?>
