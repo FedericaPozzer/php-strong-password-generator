@@ -15,10 +15,19 @@ Invece di visualizzare la password nella index, effettuare un redirect ad una pa
 </head>
 <body>
 
-    <h2 class="text-success">Complimenti, hai generato una nuova password!</h2>
-    <?php session_start() ?>
-    <h3>la nuova password è: . <?php echo $_SESSION["new_password"] ?> </h3>
-    
+    <div class="container mt-5">
+        <h2 class="text-success">Complimenti, hai generato una nuova password!</h2>
+        <?php session_start() ?>
+        <h3>la nuova password è: . <?php echo $_SESSION["new_password"] ?> </h3>
+
+        <button class="btn btn-outline-primary mt-5" type="submit">
+            <a href="http://localhost:8888/Boolean/2023-03-13/php-strong-password-generator/kill.php">Torna al Password Generator</a>
+            <?php
+            // session_start() 
+            // session_destroy() 
+            ?>
+        </button>
+    </div>
     
 </body>
 </html>
