@@ -26,14 +26,15 @@
             <div class="me-2">La password consigliata è:</div>
 
             <?php include __DIR__ . "/functions.php" ?>
-            <?php
-            if (!empty($_GET)) {
+            <?php if (!empty($_GET)) {
             $lunghezza = $_GET["lunghezza_password"];
 
-            $generatedPassword = randomPassword($lunghezza);
-            ?>
+            $generatedPassword = randomPassword($lunghezza); ?>
 
             <div> <?php echo $generatedPassword ?> </div>
+
+            <?php session_start(); 
+            $_SESSION["new_password"] = $generatedPassword ?>
 
             <?php } ?>
 
